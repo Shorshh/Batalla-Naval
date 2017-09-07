@@ -57,7 +57,7 @@ int main()
 }
 
 Barco crearbarco (int columna_i, int fila_i, int dir, int &cantbarc)
-{
+{   // Se crean los barcos
     Barco barco;
     barco.taman = cantbarc;
     barco.columna_i = columna_i;
@@ -68,7 +68,8 @@ Barco crearbarco (int columna_i, int fila_i, int dir, int &cantbarc)
 }
 
 void cargarbarcos (int &cantbarc, Barco &barco)
-{
+
+{    // Se decide la posicion del barco
     int columna;
     int fila;
     int dir;
@@ -83,6 +84,7 @@ void cargarbarcos (int &cantbarc, Barco &barco)
 
 void ubicarbarco (Barco barco, Tablero &tablero)
 {
+    // Se ubica la posicion del barco en el tablero
     if (barco.dir == 1){
         for (int i = barco.columna_i ; i < barco.columna_i+barco.taman ; i++){
             tablero.columna[i][barco.fila_i] = barco.taman;
